@@ -3,7 +3,7 @@ import pyrebase
 from django.shortcuts import redirect
 # Create your views here.
 
-# hello
+# hello is my main edit and here it is
 firebaseConfig = {
   "apiKey": "AIzaSyBCBDQQouIknZD8dg6rx8vVfe5OwBKPJFM",
   "authDomain": "tour-page-4a701.firebaseapp.com",
