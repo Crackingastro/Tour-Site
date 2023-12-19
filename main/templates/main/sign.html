@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'sign.css'%}">
+    </head>
+    <body>
+        <div class="whole">
+            <form method ="post" action="">
+                {% csrf_token %}
+                <h1>Sign Up</h1>
+
+                {% if error == "error" %}
+                    <h3>The user already exists or password not longer the 8 characters</h3>
+                {% endif %}
+
+                {% if error == "error2" %}
+                    <h3>The two passwords dont match</h3>
+                {% endif %}
+
+                <div class="user">
+                    <input type="text" placeholder="first name"  name = "first-name" required>
+                </div>
+                <div class="user">
+                    <input type="text" placeholder="last name" name = "last-name" required>
+                </div>
+                <div class="user">
+                    <input type="text" placeholder="username" name = "user-name" required>
+                </div>
+                <div class="user">
+                    <input type="text" placeholder="country" name = "country" required>
+                </div>
+                <div class="user">
+                    <input type="tel" or type="email" placeholder="email/phone number" name = "email" required>
+                </div>
+                <div class="user">
+                    <input type="password" placeholder="password" name = "password" required>
+                </div>
+                <div class="user">
+                    <input type="password" placeholder="confirm password" name = "confirm" required>
+                </div>
+                <div class="addinfo">
+                    <label><input type="checkbox">Remember me</label>
+                </div>
+                <button type="submit" value="login" class="btn">Sign up</button>
+            </form>
+        </div>
+    </body>
+</html>
