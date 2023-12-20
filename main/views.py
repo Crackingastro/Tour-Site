@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import pyrebase
+
 from django.shortcuts import redirect
 # Create your views here.
 
@@ -61,8 +62,10 @@ def signup(response):
         password = response.POST.get("password")
         confirm = response.POST.get("confirm")
 
+
         if password != confirm:
-            return render(response, "main/sign.html", {"error":"error2"})
+            arr = [first_name,last_name,user_name,country,email]
+            return render(response, "main/sign.html", {'error':arr,'cat':'bat'})
         
         try:  
             #authutication happens here      
@@ -80,7 +83,7 @@ def signup(response):
         }
 
         results = db.child("users").push(data, user['idToken'])
-        return redirect('signsucces') 
+        return redirect(signsuccess) 
     return render(response, "main/sign.html", {})
 
 # Render Signsucess Page
