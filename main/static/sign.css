@@ -27,6 +27,10 @@
         size: 36px;
         text-align: center;
     }
+    .whole h3 {
+        size: 36px;
+        text-align: center;
+    }
     .whole .user {
         width: 100%;
         height: 50px;

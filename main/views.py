@@ -70,8 +70,7 @@ def signup(response):
         try:  
             #authutication happens here      
             user = auth.create_user_with_email_and_password(email,password)
-            
-            
+                       
         except:
             return render(response, "main/sign.html", {"error":"error"})
                 
