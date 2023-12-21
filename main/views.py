@@ -65,7 +65,7 @@ def signup(response):
 
         if password != confirm:
             arr = [first_name,last_name,user_name,country,email]
-            return render(response, "main/sign.html", {'error':arr,'cat':'bat'})
+            return render(response, "main/sign.html", {'error':'error2','arr':arr})
         
         try:  
             #authutication happens here      
