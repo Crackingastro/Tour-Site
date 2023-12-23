@@ -1,20 +1,11 @@
 from django.shortcuts import render
 import pyrebase
-
+from . import creds
 from django.shortcuts import redirect
 # Create your views here.
 
-# hello is my main edit and here it is
-firebaseConfig = {
-  "apiKey": "AIzaSyBCBDQQouIknZD8dg6rx8vVfe5OwBKPJFM",
-  "authDomain": "tour-page-4a701.firebaseapp.com",
-  "projectId": "tour-page-4a701",
-  "databaseURL": "https://tour-page-4a701-default-rtdb.firebaseio.com",
-  "storageBucket": "tour-page-4a701.appspot.com",
-  "messagingSenderId": "319393656479",
-  "appId": "1:319393656479:web:7831a5796ce7f8eb44bcaa",
-  "measurementId": "G-7HQFF5FWS5",
-}
+
+firebaseConfig = creds.Config
 
 firebase = pyrebase.initialize_app(firebaseConfig)
 
