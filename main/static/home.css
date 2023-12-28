@@ -334,6 +334,9 @@ input:checked + label .description {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+
+   /* backdrop-filter: contrast(-50%);*/
+   
     height: 50vh;
     color: white;
     justify-content: center;
